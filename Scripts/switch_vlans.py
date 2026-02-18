@@ -9,7 +9,9 @@ password = getpass.getpass()
 
 
 for IP in f:
-    tn = telnetlib.Telnet(IP.strip())
+    IP = IP.strip()
+    print("Configuring Switch " + IP)
+    tn = telnetlib.Telnet(IP)
     tn.read_until(b"Username: ")
     tn.write(user.encode('ascii') + b"\n")
     if password:
