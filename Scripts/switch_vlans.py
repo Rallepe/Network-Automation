@@ -21,8 +21,8 @@ for IP in f:
     for i in range(2, 100):
         tn.write(f"vlan {i}\n".encode('ascii'))
         tn.write(f"name Python_VLAN_{i}\n".encode('ascii'))
-        tn.write(b"end\n")
-        tn.write(b"exit\n") 
+    tn.write(b"end\n")
+    tn.write(b"exit\n") 
 
 
 print(tn.read_all().decode('ascii'))
