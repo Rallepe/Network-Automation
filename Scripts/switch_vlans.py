@@ -15,12 +15,12 @@ for IP in f:
     if password:
         tn.read_until(b"Password: ")
         tn.write(password.encode('ascii') + b"\n")
-        tn.write(b"enable\n")
-        tn.write(b"cisco\n")
-        tn.write(b"conf t\n")
-        for i in range(1, 101):
-            tn.write(f"vlan {i}\n".encode('ascii'))
-            tn.write(f"name Python_VLAN_{i}\n").encode('ascii')
+    tn.write(b"enable\n")
+    tn.write(b"cisco\n")
+    tn.write(b"conf t\n")
+    for i in range(1, 101):
+        tn.write(f"vlan {i}\n".encode('ascii'))
+        tn.write(f"name Python_VLAN_{i}\n").encode('ascii')
         tn.write(b"end\n")
         tn.write(b"exit\n") 
 
