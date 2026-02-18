@@ -18,7 +18,7 @@ for IP in f:
     tn.write(b"enable\n")
     tn.write(b"cisco\n")
     tn.write(b"conf t\n")
-    for i in range(1, 101):
+    for i in range(2, 100):
         tn.write(f"vlan {i}\n".encode('ascii'))
         tn.write(f"name Python_VLAN_{i}\n".encode('ascii'))
         tn.write(b"end\n")
