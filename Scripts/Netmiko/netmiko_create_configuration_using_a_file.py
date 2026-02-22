@@ -1,7 +1,4 @@
-
-
-
-netmiko import ConnectHandler
+from netmiko import ConnectHandler
 
 
 
