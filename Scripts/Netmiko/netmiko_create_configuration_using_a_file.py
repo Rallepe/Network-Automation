@@ -1,7 +1,7 @@
 
 
 
-netmiko import connect_handler
+netmiko import ConnectHandler
 
 
 
