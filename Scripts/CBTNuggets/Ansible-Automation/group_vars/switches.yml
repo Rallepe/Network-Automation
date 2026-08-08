@@ -1,5 +1,5 @@
 ---
-# Cisco device group variables
+# Cisco switches group variables
 ansible_user: rasmus
 ansible_password: Cisco123
 ansible_network_os: ios
