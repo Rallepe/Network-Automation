@@ -1,0 +1,7 @@
+vlans:
+  - vlan_id: 10
+    name: VLAN_10
+    state: active
+  - vlan_id: 15
+    name: VLAN_15
+    state: active
