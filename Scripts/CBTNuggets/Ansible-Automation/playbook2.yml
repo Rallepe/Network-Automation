@@ -1,6 +1,7 @@
 - name: Configure VLANs on Cisco devices
   hosts: switches
   gather_facts: no
+  connection: network_cli
   
   tasks:
     - name: Configure VLANs using ios_vlans module
