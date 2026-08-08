@@ -1,7 +1,0 @@
-vlans:
-  - vlan_id: 20
-    name: VLAN_20
-    state: active
-  - vlan_id: 25
-    name: VLAN_25
-    state: active
