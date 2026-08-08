@@ -5,6 +5,9 @@ ansible_password: Cisco123
 ansible_network_os: ios
 ansible_connection: network_cli
 
+# SSH Authentication - Force password auth, disable public key
+ansible_ssh_common_args: "-o PubkeyAuthentication=no -o PasswordAuthentication=yes -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null"
+
 # Optional: Additional connection parameters
 ansible_become: yes
 ansible_become_method: enable
