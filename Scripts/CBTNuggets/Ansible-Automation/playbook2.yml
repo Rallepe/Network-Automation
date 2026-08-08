@@ -1,0 +1,19 @@
+- name: Configure VLANs on Cisco devices
+  hosts: cisco
+  gather_facts: no
+  
+  tasks:
+    - name: Configure VLANs using ios_vlans module
+      cisco.ios.ios_vlans:
+        config: "{{ vlans }}"
+        state: merged
+      
+    - name: Verify VLAN configuration
+      cisco.ios.ios_command:
+        commands:
+          - show vlan brief
+      register: vlan_output
+    
+    - name: Display VLAN configuration
+      debug:
+        msg: "{{ inventory_hostname }}: {{ vlan_output.stdout_lines }}"
