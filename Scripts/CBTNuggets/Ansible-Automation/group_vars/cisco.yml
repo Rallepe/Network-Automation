@@ -1,0 +1,15 @@
+---
+# Cisco device group variables
+ansible_user: rasmus
+ansible_password: Cisco123
+ansible_network_os: ios
+ansible_connection: network_cli
+
+# Optional: Additional connection parameters
+ansible_become: yes
+ansible_become_method: enable
+# ansible_become_password: <enable_password_if_different>
+
+# Optional: SSH parameters
+# ansible_port: 22
+# ansible_timeout: 30
