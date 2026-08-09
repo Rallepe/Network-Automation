@@ -1,6 +1,6 @@
 ---
 - name: Configure NTP servers on Cisco devices
-  hosts: cisco
+  hosts: switches
   gather_facts: no
   
   tasks:
