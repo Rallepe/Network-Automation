@@ -1,5 +1,5 @@
 - name: Configure VLANs on Cisco devices
-  hosts: cisco
+  hosts: switches
   gather_facts: no
   
   tasks:
