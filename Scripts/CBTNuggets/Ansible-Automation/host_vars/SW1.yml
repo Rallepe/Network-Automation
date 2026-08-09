@@ -2,6 +2,6 @@ vlans:
   - vlan_id: 5
     name: VLAN_5
     state: active
-  - vlan_id: 10
-    name: VLAN_10
+  - vlan_id: 20
+    name: VLAN_20
     state: active

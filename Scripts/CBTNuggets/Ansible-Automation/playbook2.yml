@@ -6,10 +6,15 @@
     ansible_network_os: cisco.ios.ios
   
   tasks:
-    - name: Configure VLANs using ios_vlans module
-      cisco.ios.ios_vlans:
-        config: "{{ vlans }}"
-        state: merged
+    - name: Configure VLANs using ios_config
+      cisco.ios.ios_config:
+        lines: |
+          {% for vlan in vlans %}
+          vlan {{ vlan.vlan_id }}
+            name {{ vlan.name }}
+          {% endfor %}
+        match: line
+        save_when: modified
       
     - name: Verify VLAN configuration
       cisco.ios.ios_command:
